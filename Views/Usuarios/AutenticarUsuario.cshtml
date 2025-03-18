@@ -1,0 +1,52 @@
+@model EcoCriaMVC.Models.Usuario
+
+@{
+    ViewBag.Title = "Autenticar";
+}
+<link rel="stylesheet" href="~/css/style-autenticar.css" asp-append-version="true" />
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Mensagem"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<div class="login-container">
+    <h2>Login do Usuário</h2>
+    <hr />
+    
+    @using (Html.BeginForm("Autenticar", "Usuarios", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="EmailUsuario">Email: </label>
+                @Html.EditorFor(model => model.EmailUsuario, new 
+                { 
+                    htmlAttributes = new { @class = "form-control", @placeholder = "Digite seu email" } 
+                })
+            </div>
+            <div class="form-group">
+                <label for="PasswordUsuario">Senha:</label>
+                @Html.PasswordFor(model => model.PasswordUsuario, new 
+                { 
+                    @class = "form-control", @placeholder = "Digite sua senha" 
+                })
+            </div>
+            <input type="submit" value="Acessar" class="btn btn-success" />
+        </div>
+    }
+
+    <div class="form-group">
+        <p><a href="/Usuarios" class="register-link">Não possui Login? Cadastre-se já</a></p>
+      <!--  <p><a href="@Url.Action("RecuperarSenha", "Usuarios")" class="forgot-password-link">Esqueci minha senha</a></p>-->
+    </div>
+</div>
