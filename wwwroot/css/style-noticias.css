@@ -1,0 +1,88 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #162515;
+}
+
+
+/* Lista de notícias */
+.lista-noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Item de notícia */
+.item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #60c659;
+}
+
+.link-noticia {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+/* Imagem da notícia */
+.item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* Título da notícia */
+.titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px 15px 10px;
+    color: rgb(24, 23, 23);
+    text-align: center;
+}
+
+/* Botão "LER MAIS" */
+.btn-mais {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 15px;
+    background-color: #60c659;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn-mais:hover {
+    background-color: #30612c;
+    cursor: pointer;
+}

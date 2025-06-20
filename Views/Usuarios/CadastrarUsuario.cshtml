@@ -1,0 +1,54 @@
+@model EcoCriaMVC.Models.Usuario
+
+@{
+    ViewBag.Title = "Registrar";
+}
+
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+<link rel="stylesheet" href="~/css/style-cadastrar.css" asp-append-version="true" />
+<div class="register-container">
+    <h2>Criar Conta</h2>
+    <hr />
+
+    @using (Html.BeginForm("Registrar", "Usuarios", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="Email">Nome:</label>
+                @Html.EditorFor(model => model.NomeUsuario, new 
+                { 
+                    htmlAttributes = new 
+                    { 
+                        @class = "form-control", @placeholder = "Digite seu nome" 
+                    } 
+                }
+            )
+                <label for="Email">Email:</label>
+                @Html.EditorFor(model => model.EmailUsuario, new 
+                { 
+                    htmlAttributes = new 
+                    { 
+                        @class = "form-control", @placeholder = "Digite seu email" 
+                    } 
+                }
+            )
+            </div>
+            <div class="form-group">
+                <label for="PasswordString">Senha:</label>
+                @Html.PasswordFor(model => model.PasswordUsuario, new { @class = "form-control", @placeholder = "Digite sua senha" })
+            </div>
+            <input type="submit" value="Cadastrar" class="btn btn-primary" />
+        </div>
+        
+    }
+
+    <div class="small-text">
+        Possui login? <a href="@Url.Action("IndexLogin", "Usuarios")">Clique aqui!</a>
+    </div>
+</div>

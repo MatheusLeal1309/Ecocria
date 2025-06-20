@@ -1,0 +1,326 @@
+/* Estilos básicos para a seção */
+.intro-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #e3f4dc;
+}
+
+.intro-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.description {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.description p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 auto;
+  max-width: 800px;
+  font-weight: bold;
+}
+
+.objectives-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.objective-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.objective-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  padding-right: 10px;
+}
+
+.objective-text p {
+  color: #333;
+  font-size: 1rem;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.mission-vision-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #e8f5e9;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0.5;
+}
+
+.green-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #77c043;
+  color: white;
+  border: 2px solid #77c043;
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.green-button:hover {
+  background-color: white;
+  color: #77c043;
+}
+
+.green-button span {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.content-box {
+  margin-top: 20px;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.contact-form {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.contact-form h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.formulario {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formulario label {
+  display: block;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #77c043;
+  margin-bottom: 5px;
+}
+
+.form-control,
+.formulario textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.form-control,
+.formulario textarea:focus {
+  border-color: #77c043;
+  outline: none;
+}
+
+.submit-button {
+  display: block;
+  background-color: #77c043;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 40px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 auto;
+}
+
+.submit-button:hover {
+  background-color: #64a836;
+}
+
+.contact-image {
+  flex: 0.5;
+}
+
+.contact-image img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas pequenas (máximo 768px) */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  .objectives-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .objective-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .objective-item img {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .mission-vision-values {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    flex: 1;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .buttons-container {
+    flex: 1;
+    gap: 15px;
+  }
+
+  .green-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .content-box {
+    padding: 15px;
+  }
+
+  /* Ajustes na seção de contato */
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .contact-form {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .contact-form h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .form-control,
+  .formulario textarea {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+
+  .contact-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+
+/* Para telas muito pequenas (máximo 480px) */
+@media (max-width: 480px) {
+  .description p {
+    font-size: 0.85rem;
+  }
+
+  .objectives-section {
+    gap: 10px;
+  }
+
+  .objective-item img {
+    width: 120px;
+  }
+
+  .green-button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .content-box {
+    padding: 10px;
+  }
+
+  .contact-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+    padding: 10px 25px;
+  }
+
+  .contact-image img {
+    width: 100%;
+    height: auto;
+  }
+}
