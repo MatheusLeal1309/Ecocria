@@ -1,6 +1,6 @@
 # EcoCriaMVC 🌱
 
-Projeto ASP.NET MVC desenvolvido para promover práticas sustentáveis e facilitar o gerenciamento de pontos de coleta e ações ecológicas.
+Projeto ASP.NET MVC desenvolvido como TCC do curso Técncio de Desenvolvimento de Sistemas para promover práticas sustentáveis e facilitar o gerenciamento de pontos de coleta e ações ecológicas.
 
 ## 📁 Estrutura do Projeto
 
